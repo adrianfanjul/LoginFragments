@@ -1,18 +1,15 @@
-package com.tokioschool.loginfragments;
+package com.tokioschool.loginfragments.login;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
-
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.Toast;
-
+import com.tokioschool.loginfragments.R;
 import com.tokioschool.loginfragments.databinding.ActivityLoginBinding;
-import com.tokioschool.loginfragments.domain.User;
-import com.tokioschool.loginfragments.fragments.FragmentLogin;
-import com.tokioschool.loginfragments.viewmodel.SharedViewModel;
+import com.tokioschool.loginfragments.login.fragments.FragmentLogin;
+import com.tokioschool.loginfragments.login.viewmodel.SharedViewModel;
 
 public class LoginActivity extends AppCompatActivity {
 

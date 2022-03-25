@@ -1,4 +1,4 @@
-package com.tokioschool.loginfragments.fragments;
+package com.tokioschool.loginfragments.login.fragments;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -16,18 +16,15 @@ import androidx.lifecycle.ViewModelProvider;
 import android.provider.MediaStore;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 
-import com.google.android.material.tabs.TabLayout;
 import com.tokioschool.loginfragments.R;
-import com.tokioschool.loginfragments.databinding.FragmentLoginBinding;
 import com.tokioschool.loginfragments.databinding.FragmentRegisterBinding;
 import com.tokioschool.loginfragments.domain.User;
-import com.tokioschool.loginfragments.viewmodel.SharedViewModel;
+import com.tokioschool.loginfragments.login.viewmodel.SharedViewModel;
 
 public class FragmentRegister extends Fragment {
     private User user;

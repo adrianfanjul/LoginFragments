@@ -1,4 +1,4 @@
-package com.tokioschool.loginfragments.fragments;
+package com.tokioschool.loginfragments.home.fragments;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;

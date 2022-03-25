@@ -1,7 +1,6 @@
-package com.tokioschool.loginfragments.fragments;
+package com.tokioschool.loginfragments.login.fragments;
 
 import static com.tokioschool.loginfragments.constants.Constants.USER;
-
 import android.content.Intent;
 import android.os.Bundle;
 import androidx.annotation.NonNull;
@@ -18,11 +17,11 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 import com.google.android.material.snackbar.BaseTransientBottomBar;
 import com.google.android.material.snackbar.Snackbar;
-import com.tokioschool.loginfragments.HomeActivity;
+import com.tokioschool.loginfragments.home.HomeActivity;
 import com.tokioschool.loginfragments.R;
 import com.tokioschool.loginfragments.databinding.FragmentLoginBinding;
 import com.tokioschool.loginfragments.domain.User;
-import com.tokioschool.loginfragments.viewmodel.SharedViewModel;
+import com.tokioschool.loginfragments.login.viewmodel.SharedViewModel;
 
 public class FragmentLogin extends Fragment {
     private User user;

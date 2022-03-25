@@ -1,4 +1,4 @@
-package com.tokioschool.loginfragments.viewmodel;
+package com.tokioschool.loginfragments.login.viewmodel;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;

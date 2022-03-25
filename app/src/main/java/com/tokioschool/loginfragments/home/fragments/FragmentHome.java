@@ -1,31 +1,20 @@
-package com.tokioschool.loginfragments.fragments;
+package com.tokioschool.loginfragments.home.fragments;
 
 import static com.tokioschool.loginfragments.constants.Constants.USER;
-
-import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.ViewModelProvider;
-
 import android.util.Log;
 import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-
 import com.google.android.material.snackbar.BaseTransientBottomBar;
 import com.google.android.material.snackbar.Snackbar;
-import com.tokioschool.loginfragments.LoginActivity;
 import com.tokioschool.loginfragments.R;
 import com.tokioschool.loginfragments.databinding.FragmentHomeBinding;
-import com.tokioschool.loginfragments.databinding.FragmentLoginBinding;
 import com.tokioschool.loginfragments.domain.User;
-import com.tokioschool.loginfragments.viewmodel.SharedViewModel;
+import com.tokioschool.loginfragments.login.viewmodel.SharedViewModel;
 
 public class FragmentHome extends Fragment {
 

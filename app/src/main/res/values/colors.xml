@@ -18,4 +18,11 @@
     <color name="home_btn_corazon">#B39DDB</color>
     <color name="home_btn_picos">#F48FB1</color>
     <color name="home_btn_cara">#FFE082</color>
+
+    <color name="background_page_one">#CE93D8</color>
+    <color name="background_page_one_dark">#2A2A2B</color>
+    <color name="background_page_two">#FFAB91</color>
+    <color name="background_page_three">#90CAF9</color>
+    <color name="background_page_three_button">#BEC1C3</color>
+    <color name="onboarding_text_color">#5E5D5D</color>
 </resources>

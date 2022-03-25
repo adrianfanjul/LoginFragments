@@ -10,10 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LoginFragments.NoActionBar">
         <activity
-            android:name=".HomeActivity"
+            android:name=".login.LoginActivity"
             android:exported="false" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".home.HomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".onboarding.OnboardingActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
