@@ -16,16 +16,37 @@
         android:elevation="4dp"
         android:minHeight="?attr/actionBarSize"
         app:title="@string/home_toolbar_title"
-        app:menu="@menu/menu_home"
-        />
+        app:tabMode="fixed"
+        app:menu="@menu/menu_home" />
 
-    <FrameLayout
-        android:id="@+id/container_fragments_home"
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/homeTabs"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintTop_toBottomOf="@+id/home_toolbar"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.1"
+        android:background="@color/secondaryColor"
+        app:tabIndicatorColor="@color/primaryColor"
+        app:tabIndicatorHeight="6dp"
+        app:tabIconTint="@color/secondaryTextColor"
+        app:layout_constraintTop_toBottomOf="@+id/home_toolbar"/>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/homeViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/homeTabs"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <FrameLayout
+        android:id="@+id/homeContainer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/homeTabs"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="parent"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

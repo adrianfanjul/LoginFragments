@@ -58,4 +58,9 @@
     <string name="onboarding_two_skip_button">Skip</string>
     <string name="onboarding_two_next_button">Next</string>
     <string name="onboarding_three_skip_button">Log in</string>
+    <string name="home_title_three">Pagina3</string>
+    <string name="home_title_four">Pagina4</string>
+    <string name="home_title_two">Lista de coches</string>
+    <string name="price_car">$%.2f/per day</string>
+    <string name="car_type_message">El coche es de tipo %1$s</string>
 </resources>

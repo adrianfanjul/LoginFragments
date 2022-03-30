@@ -14,7 +14,9 @@
             android:exported="false" />
         <activity
             android:name=".home.HomeActivity"
-            android:exported="false" />
+            android:exported="false">
+        </activity>
+
         <activity
             android:name=".onboarding.OnboardingActivity"
             android:exported="true">
@@ -23,6 +25,7 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
     </application>
 

@@ -25,4 +25,16 @@
     <color name="background_page_three">#90CAF9</color>
     <color name="background_page_three_button">#BEC1C3</color>
     <color name="onboarding_text_color">#5E5D5D</color>
+
+
+    <color name="airplane">#E82222</color>
+    <color name="electricCar">#323333</color>
+    <color name="flyingCar">#9968A1</color>
+    <color name="motorHome">#81D4FA</color>
+    <color name="pickUpCar">#FFAB91</color>
+    <color name="sportCar">#48B7EA</color>
+    <color name="clasicCar">#EF9A9A</color>ç
+    <color name="bus">#FFCC80</color>
+
+
 </resources>

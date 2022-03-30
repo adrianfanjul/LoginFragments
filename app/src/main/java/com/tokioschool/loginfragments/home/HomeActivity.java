@@ -7,14 +7,18 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+import com.google.android.material.tabs.TabLayout;
+import com.google.android.material.tabs.TabLayoutMediator;
 import com.tokioschool.loginfragments.R;
 import com.tokioschool.loginfragments.databinding.ActivityHomeBinding;
 import com.tokioschool.loginfragments.domain.User;
+import com.tokioschool.loginfragments.home.adapters.PageAdapterHome;
 import com.tokioschool.loginfragments.home.fragments.*;
-
 
 public class HomeActivity extends AppCompatActivity {
 
@@ -24,28 +28,47 @@ public class HomeActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
-
         binding= ActivityHomeBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         setSupportActionBar(binding.homeToolbar);
-        user= (User) getIntent().getParcelableExtra(USER);
-        listeners();
-    }
-    private void listeners() {
-        initHomeFragment();
-    }
+        user=(User) getIntent().getParcelableExtra(USER);
 
-    private void initHomeFragment() {
-        Fragment fragment=getSupportFragmentManager().findFragmentByTag("homeFragment");
+        PageAdapterHome pageAdapter = new PageAdapterHome(this,user);
+        binding.homeViewPager.setAdapter(pageAdapter);
+        new TabLayoutMediator(binding.homeTabs,binding.homeViewPager,((tab, position) -> {
+            if(position==0){
+                tab.setIcon(getDrawable(R.drawable.home_camera_icon));
+                tab.getIcon().setTint(getColor(R.color.primaryTextColor));
+            }
+            if(position==1){
+                tab.setIcon(getDrawable(R.drawable.home_car_icon));
+            }
+            if(position==2){
+                tab.setIcon(getDrawable(R.drawable.home_calendar_icon));
+            }
+            if(position==3){
+                tab.setIcon(getDrawable(R.drawable.home_face_icon));
+            }
+        })).attach();
 
-        getSupportFragmentManager()
-                .beginTransaction()
-                .replace(binding.containerFragmentsHome.getId() ,
-                        fragment!=null?fragment:new FragmentHome().newInstance(user),
-                        "homeFragment")
-                .commitAllowingStateLoss();
+        binding.homeTabs.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
+                tab.getIcon().setTint(getColor(R.color.primaryTextColor));
+                binding.homeContainer.setVisibility(View.INVISIBLE);
+            }
 
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+                tab.getIcon().setTint(getColor(R.color.secondaryTextColor));
+            }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+                tab.getIcon().setTint(getColor(R.color.primaryTextColor));
+                binding.homeContainer.setVisibility(View.INVISIBLE);
+            }
+        });
     }
 
     @Override
@@ -75,14 +98,15 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     private void coche_click() {
-        Fragment fragment=getSupportFragmentManager().findFragmentByTag("lilaFragment");
+        if(binding.homeContainer.getVisibility()== View.INVISIBLE)
+            binding.homeContainer.setVisibility(View.VISIBLE);
 
+        Fragment fragment=getSupportFragmentManager().findFragmentByTag("lilaFragment");
         getSupportFragmentManager()
                 .beginTransaction()
-                .replace(binding.containerFragmentsHome.getId() ,fragment!=null?fragment:new LilaFragment().newInstance(),"lilaFragment")
+                .replace(binding.homeContainer.getId() ,fragment!=null?fragment:new LilaFragment().newInstance(),"lilaFragment")
                 .addToBackStack(null)
                 .commit();
-
     }
 
     @Override

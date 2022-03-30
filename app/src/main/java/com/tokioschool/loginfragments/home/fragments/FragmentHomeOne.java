@@ -9,27 +9,28 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
+
 import com.google.android.material.snackbar.BaseTransientBottomBar;
 import com.google.android.material.snackbar.Snackbar;
 import com.tokioschool.loginfragments.R;
-import com.tokioschool.loginfragments.databinding.FragmentHomeBinding;
+import com.tokioschool.loginfragments.databinding.FragmentHomeOneBinding;
 import com.tokioschool.loginfragments.domain.User;
 import com.tokioschool.loginfragments.login.viewmodel.SharedViewModel;
 
-public class FragmentHome extends Fragment {
+public class FragmentHomeOne extends Fragment {
 
-
-    private static final String TAG = "FragmentHome";
-    private FragmentHomeBinding binding;
+    private static final String TAG = "FragmentHomeOne";
+    private FragmentHomeOneBinding binding;
     private User user;
     private SharedViewModel viewModel;
 
-    public FragmentHome() {
+    public FragmentHomeOne() {
 
     }
 
-    public static FragmentHome newInstance(User user) {
-        FragmentHome fragment=new FragmentHome();
+    public static FragmentHomeOne newInstance(User user) {
+        FragmentHomeOne fragment=new FragmentHomeOne();
         Bundle args = new Bundle();
         args.putParcelable(USER,user);
         fragment.setArguments(args);
@@ -44,7 +45,7 @@ public class FragmentHome extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        binding= FragmentHomeBinding.inflate(inflater,container,false);
+        binding= FragmentHomeOneBinding.inflate(inflater,container,false);
         return binding.getRoot();
     }
 
@@ -59,8 +60,10 @@ public class FragmentHome extends Fragment {
     }
 
     private void showUser() {
-        user=getArguments().getParcelable(USER);
-        Snackbar.make(binding.getRoot(),getString( R.string.home_snackbar_text,user.getUsername(),user.getPassword()), BaseTransientBottomBar.LENGTH_SHORT).show();
+        user=(User)getArguments().getParcelable(USER);
+
+        Toast.makeText(getActivity(),getString( R.string.home_snackbar_text,user.getUsername(),user.getPassword()), Toast.LENGTH_LONG).show();
+       //Snackbar.make(binding.getRoot(),getString( R.string.home_snackbar_text,user.getUsername(),user.getPassword()), BaseTransientBottomBar.LENGTH_SHORT).show();
     }
 
 

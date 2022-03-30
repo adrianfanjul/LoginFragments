@@ -5,10 +5,10 @@
         android:id="@+id/menu_home_eurodisney_item"
         android:icon="@drawable/baseline_castle_white_24dp"
         android:title="@string/menu_home_eurodisney_item"
-        app:showAsAction="always|withText" />
+        app:showAsAction="always" />
     <item
         android:id="@+id/menu_home_coche_item"
         android:icon="@drawable/baseline_directions_car_filled_white_24dp"
         android:title="@string/menu_home_coche_item"
-        app:showAsAction="always|withText" />
+        app:showAsAction="always" />
 </menu>
