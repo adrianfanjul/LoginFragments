@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/background_page_three"
-    tools:context=".onboarding.OnboardingActivity">
+    tools:context=".features.onboarding.OnboardingActivity">
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/onboarding_three_title"

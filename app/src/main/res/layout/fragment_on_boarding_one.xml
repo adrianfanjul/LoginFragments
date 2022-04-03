@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".onboarding.OnboardingActivity"
+    tools:context=".features.onboarding.OnboardingActivity"
     android:background="@color/background_page_one_dark">
 
     <com.google.android.material.textview.MaterialTextView
