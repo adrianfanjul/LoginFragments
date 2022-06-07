@@ -3,6 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Usuario/AndroidStudioProjects/Java/LoginFragments/app/src/main/res/font/roboto.xml" value="0.14166666666666666" />
+        <entry key="..\:/Users/Usuario/AndroidStudioProjects/Java/LoginFragments/app/src/main/res/layout/activity_home.xml" value="0.19927536231884058" />
+        <entry key="..\:/Users/Usuario/AndroidStudioProjects/Java/LoginFragments/app/src/main/res/layout/activity_login.xml" value="0.1118659420289855" />
+        <entry key="..\:/Users/Usuario/AndroidStudioProjects/Java/LoginFragments/app/src/main/res/layout/activity_onboarding.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Usuario/AndroidStudioProjects/LoginFragments/app/src/main/res/drawable/home_calendar_icon.xml" value="0.2455" />
         <entry key="..\:/Users/Usuario/AndroidStudioProjects/LoginFragments/app/src/main/res/drawable/home_camera_icon.xml" value="0.1015" />
         <entry key="..\:/Users/Usuario/AndroidStudioProjects/LoginFragments/app/src/main/res/drawable/home_tab_selector.xml" value="0.1975" />
